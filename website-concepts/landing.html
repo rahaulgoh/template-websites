@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Templates Landing Page</title>
+    <link rel="stylesheet" href="./css/landing.css" />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script defer src="./email.js"></script>
+  </head>
+  <body>
+    <div id="notification" class="hidden"></div>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <div class="nav-brand">Template Browser by Rahaul Goh</div>
+        <ul class="nav-links">
+          <li><a href="#templates">Templates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page">
+      <header>
+        <h1>Website Layout Catalogue</h1>
+        <p class="subtitle">
+          Three different layout options for your new site. Each template can be
+          adapted to your final branding, colours, and content. 
+          </p>
+          <p>
+          Please remember there is no functionality implemented in these templates.
+        </p>
+      </header>
+      <section id="templates" class="template-section">
+        <div class="template-section-header">Static Websites</div>
+        <section class="grid">
+          <!-- Template 1 -->
+          <article class="card">
+            <div class="card-tag">Template 01</div>
+            <div class="card-title">Hero Focused</div>
+            <div class="card-preview">
+                <img src="./assets/temp1.png">
+            </div>
+            <p class="card-desc">
+              Clean, modern layout with a strong hero section and clear
+              call-to-action, ideal for professional and corporate brands.
+            </p>
+            <div class="card-actions">
+              <div class="pill">Best for: SaaS / B2B</div>
+              <a href="template-1.html" class="btn">
+                View template <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Template 2 -->
+          <article class="card">
+            <div class="card-tag">Template 02</div>
+            <div class="card-title">Story Driven</div>
+            <div class="card-preview">
+                <img src="./assets/temp2.png">
+            </div>
+            <p class="card-desc">
+              Puts your story and mission front and centre with bold imagery and
+              narrative-led sections.
+            </p>
+            <div class="card-actions">
+              <div class="pill">Best for: Brand-first</div>
+              <a href="template-2.html" class="btn">
+                View template <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Template 3 -->
+          <article class="card">
+            <div class="card-tag">Template 03</div>
+            <div class="card-title">Service First</div>
+            <div class ="card-preview">
+                <img src="./assets/temp3.png">
+            </div>
+            <p class="card-desc">
+              Focused on what you offer, with a strong services grid and clear
+              structure for offerings and contact.
+            </p>
+            <div class="card-actions">
+              <div class="pill">Best for: Consulting</div>
+              <a href="template-3.html" class="btn">
+                View template <span>↗</span>
+              </a>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <!-- Contact Form -->
+      <section id="contact" class="contact-section">
+        <div class="contact-inner">
+          <h2>Get in Touch</h2>
+          <p>
+            Interested in using one of these templates for your website? Reach
+            out to discuss your project and how we can help.
+          </p>
+          <form id="contact-form" class="contact-form">
+            <input type="text" name="hp_field" style="display:none;">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button class = "btn-submit"type="submit">
+              <span class="btn-label">Send Message</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Dynamic Website Implementation -->
+      <!-- <section class="template-section template-section--dynamic"> 
+        <div class="template-section-header">Dynamic Websites</div>
+        <section class="grid">
+          Template 4 
+          <article class="card">
+            <div class="card-tag">Template 01</div>
+            <div class="card-title">Analytical Website</div>
+            <div class="card-preview">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <p class="card-desc">
+              A layout designed for data-driven businesses, featuring sections
+              for analytics, case studies, and performance metrics.
+            </p>
+            <div class="card-actions">
+              <div class="pill">Best for: Data-driven businesses</div>
+              <a href="template-4.html" class="btn">
+                View template <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+         Template 5 
+          <article class="card">
+            <div class="card-tag">Template 02</div>
+            <div class="card-title">E-Commerce</div>
+            <div class="card-preview">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <p class="card-desc">
+              A user-friendly e-commerce layout with product showcases, reviews,
+              and a streamlined checkout process.
+            </p>
+            <div class="card-actions">
+              <div class="pill">Best for: E-Commerce</div>
+              <a href="template-5.html" class="btn">
+                View template <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          Template 6 
+          <article class="card">
+            <div class="card-tag">Template 03</div>
+            <div class="card-title">Social Media</div>
+            <div class="card-preview">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <p class="card-desc">
+              A vibrant layout tailored for social media platforms, with
+              sections for user interaction, trending topics, and multimedia
+              content.
+            </p>
+            <div class="card-actions">
+              <div class="pill">Best for: Social Media</div>
+              <a href="template-6.html" class="btn">
+                View template <span>↗</span>
+              </a>
+            </div>
+          </article>
+        </section>
+      </section> -->
+
+      <footer>
+        These are just layout concepts |--| colours, fonts, and imagery will follow your
+        final brand bible.
+        <div class="copyright">© 2025 Rahaul Goh. All rights reserved.</div>
+      </footer>
+    </div>
+  </body>
+</html>
